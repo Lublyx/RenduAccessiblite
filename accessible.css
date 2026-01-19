@@ -51,6 +51,16 @@ article {
     border-radius: 15px
 }
 
+.Menu {
+    text-align: right;
+    justify-content: center;
+
+    #burger {
+        width: 3em;
+        height: 3em;
+    }
+}
+
 .formelement {
     width: 100%;
     padding: 1em;
@@ -83,23 +93,29 @@ article {
     -webkit-text-fill-color: transparent;
 }
 
-.nav-links {
+#nav-links {
+    background: black;
     display: flex;
+    margin-left: auto;
+    margin-right: 3em;
     gap: 40px;
     list-style: none;
+    padding: 1.2em;
 }
 
-.nav-links a {
+#nav-links li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
+#nav-links li a:hover {
     color: #ff00ff;
     transform: scale(1.1);
 }
+
+
 
 .hero {
     position: relative;
@@ -219,7 +235,11 @@ textarea:focus {
 }
 
 .footer {
-    background: linear-gradient(135deg, #000, #1a1a1a);
+    background: #000;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    font-size: 1em;
 }
 
 fieldset {
@@ -227,13 +247,19 @@ fieldset {
     max-width: 35em;
     margin: auto;
 
-    label{
+    label {
         color: black;
         font-size: 1.3em;
     }
 
-    textarea{
+    textarea {
         min-height: 10em;
+    }
+}
+
+@media (min-width: 769px) {
+    .Menu {
+        display: none;
     }
 }
 
@@ -243,11 +269,32 @@ fieldset {
         font-size: 32px;
     }
 
-    .nav-links {
+    #nav-links {
         display: none;
     }
 
     .section {
         padding: 80px 25px;
+    }
+
+    .Menu {
+        display: block;
+    }
+
+    #nav-links:popover-open {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        top: 80px;
+        padding: 2em;
+        background-color: black;
+        border: 2px solid rgba(255, 0, 102, 0.3);
+        ;
+        border-radius: 15px;
+
+        a {
+            padding: 1rem;
+            font-size: 1.2em;
+        }
     }
 }
