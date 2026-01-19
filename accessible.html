@@ -1,117 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TueTonVoisin</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Accueil | TueTonVoisin</title>
+    <link rel="stylesheet" href="accessible.css">
 </head>
+
 <body>
 
-<div class="navbar">
-    <div class="logo">TueTonVoisin</div>
-    <div class="nav-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#catalogue">Catalogue</a>
-        <a href="#contact">Contact</a>
-    </div>
-</div>
+    <header role="banner">
+
+        <nav class="navbar" aria-label="Menu principale">
+            <a href="#accueil" class="logo">TueTonVoisin</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">A Propos</a></li>
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
 
-<section id="accueil" class="hero">
-    <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=1200" class="hero-bg">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="hero-title" style="color:#00ff88">
-            ACHÈTE UNE ARME ET ENTERRE TES PROBLÈMES
-        </div>
-        <div class="hero-subtitle" style="color:#ff00ff;font-size:12px">
-            Précision et réalisme pour tous les passionnés d’airsoft
-        </div>
-        <div class="cta-button" onclick="location.href='#catalogue'">
-            VOIR LE CATALOGUE
-        </div>
-    </div>
-</section>
-
-
-<section id="apropos" class="section">
-    <div style="font-size:48px;color:#ff0066;text-align:center;margin-bottom:50px">
-        À propos de TueTonVoisin
-    </div>
-
-    <div style="display:flex;gap:50px;align-items:center">
-        <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=600" style="width:50%;border-radius:15px">
-        <div style="font-size:12px;color:#777;line-height:1.7">
-            TueTonVoisin est une boutique spécialisée dans la vente de répliques d’armes à feu pour airsoft.
-            Toutes nos répliques sont conformes à la législation française et destinées à un usage sportif.
-            <br><br>
-            Depuis 2015, nous proposons des produits fiables, performants et sécurisés pour tous les passionnés.
-        </div>
-    </div>
-</section>
-
-
-<section id="catalogue" class="section dark-section">
-    <div style="font-size:48px;text-align:center;color:#00ff88;margin-bottom:50px">
-        Catalogue
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px">
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=400">
-            <div class="product-info">
-                <div style="color:#ff0066">Pistolet M1911</div>
-                <div style="font-size:11px;color:#999">Réplique semi-automatique</div>
-                <div style="color:#00ccff;font-size:18px">149€</div>
+        <section id="accueil" class="hero">
+            <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=1200" class="hero-bg" alt="">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" style="color:#fbfbfb">
+                    ACHÈTE UNE ARME ET ENTERRE TES PROBLÈMES
+                </h1>
+                <p class="hero-subtitle" style="color:#f4f4f4;font-size:12px">
+                    Précision et réalisme pour tous les passionnés d’airsoft
+                </p>
+                <a class="cta-button" href='#catalogue'">
+                    VOIR LE CATALOGUE
+                </a>
             </div>
-        </div>
+        </section>
+    </header>
 
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=400">
-            <div class="product-info">
-                <div style="color:#ff0066">M4A1 Tactical</div>
-                <div style="font-size:11px;color:#999">Fusil d’assaut électrique</div>
-                <div style="color:#00ccff;font-size:18px">389€</div>
+
+    <main role="main">
+        <section id="apropos" class="section">
+            <h2 style="font-size:48px;color:#000000;text-align:center;margin-bottom:50px">
+                À propos de TueTonVoisin
+            </h2>
+
+            <article style="display:flex;gap:50px;align-items:center">
+                <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=600"
+                    style="width:50%;border-radius:15px" alt="">
+                <p style="font-size:12px;color:#777;line-height:1.7">
+                    TueTonVoisin est une boutique spécialisée dans la vente de répliques d’armes à feu pour airsoft.
+                    Toutes nos répliques sont conformes à la législation française et destinées à un usage sportif.
+                    <br><br>
+                    Depuis 2015, nous proposons des produits fiables, performants et sécurisés pour tous les passionnés.
+                </p>
+            </article>
+        </section>
+
+
+        <section id="catalogue" class="section dark-section">
+            <h2 style="font-size:48px;text-align:center;color:#000000;margin-bottom:50px">
+                Catalogue
+            </h2>
+
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px">
+
+                <a class="product-card" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/M1911_A1_pistol.jpg" alt="">
+                    <ul class="product-info">
+                        <li style="color:#000000">Pistolet M1911</li>
+                        <li style="font-size:11px;color:#999">Réplique semi-automatique</li>
+                        <li style="color:#00ccff;font-size:18px">149€</li>
+                    </ul>
+                </a>
+
+                <a class="product-card" href="#">
+                    <img src="https://www.taiwangun.com/img/product_media/3451001-3452000/karabiny-szturmowe-asg-karabiny-gazowe-asg-replika-gazowa-colt-m4a1-sopmod-14-5-black-cgs-3451667(1-1).jpg" alt="">
+                    <ul class="product-info">
+                        <li style="color:#000000">M4A1 Tactical</li>
+                        <li style="font-size:11px;color:#999">Fusil d’assaut électrique</li>
+                        <li style="color:#00ccff;font-size:18px">389€</li>
+                    </ul>
+                </a>
+
+                <a class="product-card" href="#">
+                    <img src="https://media.phenixairsoft.com/61386-large_default/sniper-l96-mauser-w-lunette-bipied-well.jpg" alt="">
+                    <ul class="product-info">
+                        <li style="color:#000000">Sniper L96</li>
+                        <li style="font-size:11px;color:#999">Réplique de précision</li>
+                        <li style="color:#00ccff;font-size:18px">459€</li>
+                    </ul>
+                </a>
+
             </div>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1584454584188-1bb43b3e07e7?w=400">
-            <div class="product-info">
-                <div style="color:#ff0066">Sniper L96</div>
-                <div style="font-size:11px;color:#999">Réplique de précision</div>
-                <div style="color:#00ccff;font-size:18px">459€</div>
-            </div>
-        </div>
-
-    </div>
-</section>
+        </section>
 
 
-<section id="contact" class="section">
-    <div style="font-size:48px;text-align:center;color:#ff00ff;margin-bottom:40px">
-        Contact
-    </div>
+        <section id="contact" class="section">
+            <h2 style="font-size:48px;text-align:center;color:#000000;margin-bottom:40px">
+                Contact
+            </h2>
 
-    <div style="max-width:600px;margin:auto">
-        <input type="text" placeholder="Nom" style="width:100%;padding:12px;margin-bottom:15px">
-        <input type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:15px">
-        <textarea placeholder="Message" style="width:100%;height:120px;padding:12px"></textarea>
+            <fieldset style="max-width:600px;margin:auto">
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" style="width:100%;padding:12px;margin-bottom:15px">
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" autocomplete="email" style="width:100%;padding:12px;margin-bottom:15px">
+                <label for="message">Votre message :</label>
+                <textarea id="message" style="width:100%;height:120px;padding:12px"></textarea>
 
-        <div class="cta-button" style="margin-top:20px;text-align:center">
-            ENVOYER
-        </div>
-    </div>
-</section>
+                <button type="submit" class="cta-button" style="margin:20px auto; display:block;">
+                    ENVOYER
+                </button>
+            </fieldset>
+        </section>
+    </main>
 
 
-<div class="footer" style="background:#000;color:#00ff88;padding:30px;text-align:center;font-size:10px">
-    AirsoftPro © 2024 – Vente de répliques d’armes airsoft<br>
-    <span style="color:#ff00ff">Vente interdite aux mineurs – Conforme à la législation</span>
-</div>
+    <footer role="contentinfo" class="footer"
+        style="background:#000;color:#ffffff;padding:30px;text-align:center;font-size:10px">
+        AirsoftPro © 2024 – Vente de répliques d’armes airsoft<br>
+        <span style="color:#ffffff">Vente interdite aux mineurs – Conforme à la législation</span>
+    </footer>
+
 
 </body>
+
 </html>
